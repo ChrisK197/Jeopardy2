@@ -1,0 +1,5 @@
+This function is used to print text;print()
+This symbol is used to make a comment;#
+This allows code to repeat under a certain condition;while loop
+This is the name of the x term in the following line of code: def function (self, x);parameter
+This function creates a text entry of self;entry(self)

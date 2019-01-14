@@ -1,0 +1,5 @@
+5 in base 10 = this in binary;101
+12 in base 10 = this in hexidecimal;c
+12 in octal = this in binary;1010
+1011 0011 in binary = this in base 10;179
+34C in hexidecimal = this in base 10;844
