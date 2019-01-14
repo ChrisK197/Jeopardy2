@@ -4,7 +4,7 @@ meme = open('meme_questions.txt', 'r')
 number = open('number_questions.txt', 'r')
 python = open('python_questions.txt', 'r')
 random = open('random_questions.txt', 'r')
-filelist= [bca, meme, number, python, random]
+filelist = [bca, meme, number, python, random]
 dbca = {}
 dmeme = {}
 dnumber = {}
@@ -23,5 +23,4 @@ for file in filelist:
         elif file == python:
             dpython[line[0]] = line[1]
         else:
-            drandom[line[0]] = line[1]
-
+            drandom[line[0].strip()] = line[1].strip()

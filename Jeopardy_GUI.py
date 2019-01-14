@@ -96,8 +96,35 @@ class Application (Frame):
         Label(self, text=" ", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=13, column=0, columnspan=5, sticky=N + S + E + W)
 
     def question_bttn(self, dic, quesPos):
+        bca = open('bca_questions.txt', 'r')
+        meme = open('meme_questions.txt', 'r')
+        number = open('number_questions.txt', 'r')
+        python = open('python_questions.txt', 'r')
+        random = open('random_questions.txt', 'r')
+        filelist = [bca, meme, number, python, random]
+        dbca = {}
+        dmeme = {}
+        dnumber = {}
+        dpython = {}
+        drandom = {}
+        thatlist = [dbca, dmeme, dnumber, dpython, drandom]
+        for file in filelist:
+            for line in file:
+                line = line.split(';')
+                if file == bca:
+                    dbca[line[0]] = line[1]
+                elif file == meme:
+                    dmeme[line[0]] = line[1]
+                elif file == number:
+                    dnumber[line[0]] = line[1]
+                elif file == python:
+                    dpython[line[0]] = line[1]
+                else:
+                    drandom[line[0].strip()] = line[1].strip()
+
         self.question.delete(0.0, END)
         self.question.insert(0.0, thatlist[dic[quesPos]])
+
     def answer(self, question):
         Text(self, text=question[1])
         # self.msg_txt = Text(self, width=50, height=10, wrap=WORD)
