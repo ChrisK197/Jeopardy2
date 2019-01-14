@@ -27,6 +27,13 @@ for file in filelist:
             dpython[line[0]] = line[1]
         else:
             drandom[line[0].strip()] = line[1].strip()
+keybca = list(dbca.keys())
+keymeme = list(dmeme.keys())
+keynumber = list(dnumber.keys())
+keypython = list(dpython.keys())
+keyrandom = list(drandom.keys())
+keyslist = [keybca, keymeme, keynumber, keypython, keyrandom]
+
 
 class Application (Frame):
     def __init__(self, master):
@@ -125,7 +132,7 @@ class Application (Frame):
     def question_bttn(self, dic, quesPos):
 
         self.question.delete(0.0, END)
-        self.question.insert(0.0, thatlist[dic[quesPos]])
+        self.question.insert(0.0, keyslist[dic[quesPos]])
 
     def answer(self, question):
         Text(self, text=question[1])
