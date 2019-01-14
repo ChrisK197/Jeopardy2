@@ -10,7 +10,7 @@ dmeme = {}
 dnumber = {}
 dpython = {}
 drandom = {}
-thatlist = [dbca, dmeme, dnumber,dpython, drandom]
+thatlist = [dbca, dmeme, dnumber, dpython, drandom]
 for file in filelist:
     for line in file:
         line = line.split(';')
