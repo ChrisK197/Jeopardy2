@@ -1,5 +1,7 @@
 from tkinter import *
 
+#LEO"S GOOD FILE
+
 bca = open('bca_questions.txt', 'r')
 meme = open('meme_questions.txt', 'r')
 number = open('number_questions.txt', 'r')
@@ -25,13 +27,6 @@ for file in filelist:
             dpython[line[0]] = line[1]
         else:
             drandom[line[0].strip()] = line[1].strip()
-keybca = list(dbca.keys())
-keymeme = list(dmeme.keys())
-keynumber = list(dnumber.keys())
-keypython = list(dpython.keys())
-keyrandom = list(drandom.keys())
-keyslist = [keybca, keymeme, keynumber, keypython, keyrandom]
-
 
 class Application (Frame):
     def __init__(self, master):
@@ -112,16 +107,16 @@ class Application (Frame):
 
         # Question box
         Label(self, text="Question:", font=("Comic Sans", 15)).grid(row=7, column=2, columnspan=2, sticky=N+S+E+W)
-        self.question = Text(self, height=5, wrap=WORD)
+        self.question = Text(self, height=5, wrap=WORD, relief="solid")
         self.question.grid(row=8, column=0, columnspan=5)
 
         # Answer box
         Label(self, text="Answer:", font=("Comic Sans", 15)).grid(row=9, column=2, columnspan=2, sticky=N + S + E + W)
-        self.answer = Entry(self, height=2, wrap=WORD)
+        self.answer = Entry(self, relief="solid")
         self.answer.grid(row=10, column=0, columnspan=5)
         self.enter = Button(self, text="Enter", font=("Comic Sans", 15), relief="solid", bg="blue")  # command
         self.enter.grid(row=11, column=2, columnspan=2, sticky=N + S + E + W)
-        self.correct = Text(self, height=2, wrap=WORD)
+        self.correct = Text(self, height=2, wrap=WORD, relief="solid")
         self.correct.grid(row=12, column=0, columnspan=5)
 
         # Footer
@@ -130,15 +125,12 @@ class Application (Frame):
     def question_bttn(self, dic, quesPos):
 
         self.question.delete(0.0, END)
-        self.question.insert(0.0, keyslist[dic[quesPos]])
+        self.question.insert(0.0, thatlist[dic[quesPos]])
 
-    def answer(self, dic, quesPos, question):
+    def answer(self, question):
+        Text(self, text=question[1])
         # self.msg_txt = Text(self, width=50, height=10, wrap=WORD)
         # self.msg_txt.grid(row=3, column=0, columnspan=4
-        if self.answer == thatlist[dic[quesPos]]:
-            thatlist # THIS is filler stuff
-
-
 
 
 root = Tk()
