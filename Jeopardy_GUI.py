@@ -95,8 +95,9 @@ class Application (Frame):
         # Footer
         Label(self, text=" ", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=13, column=0, columnspan=5, sticky=N + S + E + W)
 
-    def question_bttn(self, question):
-        Text(self, text=question[0])
+    def question_bttn(self, dic, quesPos):
+        self.question.delete(0.0, END)
+        self.question.insert(0.0, thatlist[dic[quesPos]])
     def answer(self, question):
         Text(self, text=question[1])
         # self.msg_txt = Text(self, width=50, height=10, wrap=WORD)
