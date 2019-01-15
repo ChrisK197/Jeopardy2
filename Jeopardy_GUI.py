@@ -1,6 +1,6 @@
 from tkinter import *
 
-#LEO"S GOOD FILE
+#LEO'S GOOD FILE
 
 bca = open('bca_questions.txt', 'r')
 meme = open('meme_questions.txt', 'r')
@@ -36,12 +36,18 @@ keyslist = [keybca, keymeme, keynumber, keypython, keyrandom]
 
 
 class Application (Frame):
+
     def __init__(self, master):
         super(Application, self).__init__(master)
         self.grid()
         self.create_widgets()
 
     def create_widgets(self):
+        # Question box
+        Label(self, text="Question:", font=("Comic Sans", 15)).grid(row=7, column=2, columnspan=2, sticky=N + S + E + W)
+        self.question = Text(self, height=5, wrap=WORD, relief="solid")
+        self.question.grid(row=8, column=0, columnspan=5)
+
         # Header
         Label(self, text="Jeopardy", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=0, column=0, columnspan=5, sticky=N+S+E+W)
 
@@ -53,7 +59,7 @@ class Application (Frame):
         Label(self, text="Miscellaneous", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=4, columnspan=1, sticky=N+S+E+W)
 
         # 100 Point row
-        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red") #command
+        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(3,0)) #command
         self.cat1_100.grid(row=2, column=0, sticky=N+S+E+W)
         self.cat2_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red") #command
         self.cat2_100.grid(row=2, column=1, sticky=N+S+E+W)
@@ -112,10 +118,7 @@ class Application (Frame):
         self.cat5_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple")  # command
         self.cat5_500.grid(row=6, column=4, sticky=N+S+E+W)
 
-        # Question box
-        Label(self, text="Question:", font=("Comic Sans", 15)).grid(row=7, column=2, columnspan=2, sticky=N+S+E+W)
-        self.question = Text(self, height=5, wrap=WORD, relief="solid")
-        self.question.grid(row=8, column=0, columnspan=5)
+
 
         # Answer box
         Label(self, text="Answer:", font=("Comic Sans", 15)).grid(row=9, column=2, columnspan=2, sticky=N + S + E + W)
@@ -130,9 +133,9 @@ class Application (Frame):
         Label(self, text=" ", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=13, column=0, columnspan=5, sticky=N + S + E + W)
 
     def question_bttn(self, dic, quesPos):
-
+        dic=keyslist[dic]
         self.question.delete(0.0, END)
-        self.question.insert(0.0, keyslist[dic[quesPos]])
+        self.question.insert(0.0, dic[quesPos])
 
     def answer(self, question):
         Text(self, text=question[1])
