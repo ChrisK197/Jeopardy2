@@ -126,10 +126,10 @@ class Application (Frame):
         self.answer = Entry(self, relief="solid")
         self.answer.grid(row=10, column=0, columnspan=5)
         #Enter button
-        self.enter = Button(self, text="Enter", font=("Comic Sans", 15), relief="solid", bg="blue", command=correct())  # command
+        self.enter = Button(self, text="Enter", font=("Comic Sans", 15), relief="solid", bg="blue", command=self.correct())  # command
         self.enter.grid(row=11, column=2, columnspan=2, sticky=N + S + E + W)
-        self.correct = Text(self, height=2, wrap=WORD, relief="solid")
-        self.correct.grid(row=12, column=0, columnspan=5)
+        self.correctbox = Text(self, height=2, wrap=WORD, relief="solid")
+        self.correctbox.grid(row=12, column=0, columnspan=5)
 
         # Footer
         Label(self, text=" ", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=13, column=0, columnspan=5, sticky=N + S + E + W)
