@@ -137,11 +137,14 @@ class Application (Frame):
         self.question.delete(0.0, END)
         self.question.insert(0.0, dic[quesPos])
 
-    def answer(self, question):
-        Text(self, text=question[1])
-        # self.msg_txt = Text(self, width=50, height=10, wrap=WORD)
-        # self.msg_txt.grid(row=3, column=0, columnspan=4
-
+    def correct(self, dicpos, quesPos):
+        dic = keyslist[dicpos]
+        ans= dic[quesPos]
+        self.correct.delete(0.0, END)
+        if self.answer.get().lower() == ans.lower():
+            self.correct.insert(0.0, "CORRECT!!!!! :)")
+        else:
+            self.correct.insert(0.0, "Incorrect :(")
 
 root = Tk()
 root.title("Jeopardy")
