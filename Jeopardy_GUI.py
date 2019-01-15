@@ -60,7 +60,7 @@ class Application (Frame):
         Label(self, text="Miscellaneous", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=4, columnspan=1, sticky=N+S+E+W)
 
         # 100 Point row
-        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(0,0)) #command
+        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(0, 0)) #command
         self.cat1_100.grid(row=2, column=0, sticky=N+S+E+W)
         self.cat2_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red") #command
         self.cat2_100.grid(row=2, column=1, sticky=N+S+E+W)
@@ -140,13 +140,16 @@ class Application (Frame):
         self.question.insert(0.0, dic[quesPos])
 
     def correct(self, dicpos, quesPos):
-        dic = keyslist[dicpos]
-        ans= dic[quesPos]
-        self.correct.delete(0.0, END)
-        if self.answer.get().lower() == ans.lower():
-            self.correct.insert(0.0, "CORRECT!!!!! :)")
-        else:
-            self.correct.insert(0.0, "Incorrect :(")
+        q = self.question.get()
+        ans = self.answer.get()
+        self.correctbox.delete(0.0, END)
+        for d in range(len(thatlist)):
+            dictt = thatlist[d]
+            if dictt[q] is not None:
+                if ans == dictt[q]:
+                    self.correctbox.insert(0.0, 'CORRECT!!!!!')
+                else:
+                    self.correctbox.insert(0.0, "INCORRECT :(")
 
 root = Tk()
 root.title("Jeopardy")
