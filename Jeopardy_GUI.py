@@ -53,14 +53,14 @@ class Application (Frame):
         Label(self, text="Jeopardy", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=0, column=0, columnspan=5, sticky=N+S+E+W)
 
         # Category labels
-        Label(self, text="Python", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=0, columnspan=1, sticky=N+S+E+W)
-        Label(self, text="Numbers", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=1, columnspan=1, sticky=N+S+E+W)
-        Label(self, text="Memes", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=2, columnspan=1, sticky=N+S+E+W)
-        Label(self, text="BCA", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=3, columnspan=1, sticky=N+S+E+W)
+        Label(self, text="BCA", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=0, columnspan=1, sticky=N+S+E+W)
+        Label(self, text="Memes", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=1, columnspan=1, sticky=N+S+E+W)
+        Label(self, text="Numbers", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=2, columnspan=1, sticky=N+S+E+W)
+        Label(self, text="Python", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=3, columnspan=1, sticky=N+S+E+W)
         Label(self, text="Miscellaneous", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=4, columnspan=1, sticky=N+S+E+W)
 
         # 100 Point row
-        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(3,0)) #command
+        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(0,0)) #command
         self.cat1_100.grid(row=2, column=0, sticky=N+S+E+W)
         self.cat2_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red") #command
         self.cat2_100.grid(row=2, column=1, sticky=N+S+E+W)
@@ -125,7 +125,8 @@ class Application (Frame):
         Label(self, text="Answer:", font=("Comic Sans", 15)).grid(row=9, column=2, columnspan=2, sticky=N + S + E + W)
         self.answer = Entry(self, relief="solid")
         self.answer.grid(row=10, column=0, columnspan=5)
-        self.enter = Button(self, text="Enter", font=("Comic Sans", 15), relief="solid", bg="blue")  # command
+        #Enter button
+        self.enter = Button(self, text="Enter", font=("Comic Sans", 15), relief="solid", bg="blue", command=correct())  # command
         self.enter.grid(row=11, column=2, columnspan=2, sticky=N + S + E + W)
         self.correct = Text(self, height=2, wrap=WORD, relief="solid")
         self.correct.grid(row=12, column=0, columnspan=5)
