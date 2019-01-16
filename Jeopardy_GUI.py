@@ -1,6 +1,6 @@
 from tkinter import *
 
-#LEO'S GOOD FILE
+# LEO'S GOOD FILE
 #
 
 bca = open('bca_questions.txt', 'r')
