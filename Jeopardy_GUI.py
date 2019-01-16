@@ -146,7 +146,7 @@ class Application (Frame):
         for d in range(len(thatlist)):
             dictt = thatlist[d]
             if q in dictt:
-                if ans == dictt[q]:
+                if ans.lower() == dictt[q]:
                     self.correctbox.insert(0.0, 'CORRECT!!!!!')
                 else:
                     self.correctbox.insert(0.0, "INCORRECT :(")
