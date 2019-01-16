@@ -60,63 +60,63 @@ class Application (Frame):
         Label(self, text="Miscellaneous", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=1, column=4, columnspan=1, sticky=N+S+E+W)
 
         # 100 Point row
-        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(0, 0)) #command
+        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn(0, 0)) #command
         self.cat1_100.grid(row=2, column=0, sticky=N+S+E+W)
-        self.cat2_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(1, 0)) #command
+        self.cat2_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn(1, 0)) #command
         self.cat2_100.grid(row=2, column=1, sticky=N+S+E+W)
-        self.cat3_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(2, 0)) #command
+        self.cat3_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn(2, 0)) #command
         self.cat3_100.grid(row=2, column=2, sticky=N+S+E+W)
-        self.cat4_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(3, 0)) #command
+        self.cat4_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn(3, 0)) #command
         self.cat4_100.grid(row=2, column=3, sticky=N+S+E+W)
-        self.cat5_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=self.question_bttn(4, 0)) #command
+        self.cat5_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn(4, 0)) #command
         self.cat5_100.grid(row=2, column=4, sticky=N+S+E+W)
 
         # 200 Point row
-        self.cat1_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=self.question_bttn(0, 1))  # command
+        self.cat1_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn(0, 1))  # command
         self.cat1_200.grid(row=3, column=0, sticky=N+S+E+W)
-        self.cat2_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=self.question_bttn(1, 1))  # command
+        self.cat2_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn(1, 1))  # command
         self.cat2_200.grid(row=3, column=1, sticky=N+S+E+W)
-        self.cat3_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=self.question_bttn(2, 1))  # command
+        self.cat3_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn(2, 1))  # command
         self.cat3_200.grid(row=3, column=2, sticky=N+S+E+W)
-        self.cat4_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=self.question_bttn(3, 1))  # command
+        self.cat4_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn(3, 1))  # command
         self.cat4_200.grid(row=3, column=3, sticky=N+S+E+W)
-        self.cat5_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=self.question_bttn(4, 1))  # command
+        self.cat5_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn(4, 1))  # command
         self.cat5_200.grid(row=3, column=4, sticky=N+S+E+W)
 
         # 300 Point row
-        self.cat1_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=self.question_bttn(0, 2))  # command
+        self.cat1_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn(0, 2))  # command
         self.cat1_300.grid(row=4, column=0, sticky=N+S+E+W)
-        self.cat2_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=self.question_bttn(1, 2))  # command
+        self.cat2_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn(1, 2))  # command
         self.cat2_300.grid(row=4, column=1, sticky=N+S+E+W)
-        self.cat3_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=self.question_bttn(2, 2))  # command
+        self.cat3_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn(2, 2))  # command
         self.cat3_300.grid(row=4, column=2, sticky=N+S+E+W)
-        self.cat4_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=self.question_bttn(3, 2))  # command
+        self.cat4_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn(3, 2))  # command
         self.cat4_300.grid(row=4, column=3, sticky=N+S+E+W)
-        self.cat5_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=self.question_bttn(4, 2))  # command
+        self.cat5_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn(4, 2))  # command
         self.cat5_300.grid(row=4, column=4, sticky=N+S+E+W)
 
         # 400 Point row
-        self.cat1_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=self.question_bttn(0, 3))  # command
+        self.cat1_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn(0, 3))  # command
         self.cat1_400.grid(row=5, column=0, sticky=N+S+E+W)
-        self.cat2_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=self.question_bttn(1, 3))  # command
+        self.cat2_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn(1, 3))  # command
         self.cat2_400.grid(row=5, column=1, sticky=N+S+E+W)
-        self.cat3_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=self.question_bttn(2, 3))  # command
+        self.cat3_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn(2, 3))  # command
         self.cat3_400.grid(row=5, column=2, sticky=N+S+E+W)
-        self.cat4_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=self.question_bttn(3, 3))  # command
+        self.cat4_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn(3, 3))  # command
         self.cat4_400.grid(row=5, column=3, sticky=N+S+E+W)
-        self.cat5_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=self.question_bttn(4, 3))  # command
+        self.cat5_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn(4, 3))  # command
         self.cat5_400.grid(row=5, column=4, sticky=N+S+E+W)
 
         # 500 Point row
-        self.cat1_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=self.question_bttn(0, 4))  # command
+        self.cat1_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn(0, 4))  # command
         self.cat1_500.grid(row=6, column=0, sticky=N+S+E+W)
-        self.cat2_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=self.question_bttn(1, 4))  # command
+        self.cat2_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn(1, 4))  # command
         self.cat2_500.grid(row=6, column=1, sticky=N+S+E+W)
-        self.cat3_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=self.question_bttn(2, 4))  # command
+        self.cat3_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn(2, 4))  # command
         self.cat3_500.grid(row=6, column=2, sticky=N+S+E+W)
-        self.cat4_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=self.question_bttn(3, 4))  # command
+        self.cat4_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn(3, 4))  # command
         self.cat4_500.grid(row=6, column=3, sticky=N+S+E+W)
-        self.cat5_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=self.question_bttn(4, 4))  # command
+        self.cat5_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn(4, 4))  # command
         self.cat5_500.grid(row=6, column=4, sticky=N+S+E+W)
 
 
