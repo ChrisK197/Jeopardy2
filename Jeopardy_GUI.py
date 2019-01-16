@@ -126,7 +126,7 @@ class Application (Frame):
         self.answer = Entry(self, relief="solid")
         self.answer.grid(row=10, column=0, columnspan=5)
         #Enter button
-        self.enter = Button(self, text="Enter", font=("Comic Sans", 15), relief="solid", bg="blue", command=self.correct())  # command
+        self.enter = Button(self, text="Enter", font=("Comic Sans", 15), relief="solid", bg="blue", command=self.correct)  # command
         self.enter.grid(row=11, column=2, columnspan=2, sticky=N + S + E + W)
         self.correctbox = Text(self, height=2, wrap=WORD, relief="solid")
         self.correctbox.grid(row=12, column=0, columnspan=5)
@@ -139,8 +139,8 @@ class Application (Frame):
         self.question.delete(0.0, END)
         self.question.insert(0.0, dic[quesPos])
 
-    def correct(self, dicpos, quesPos):
-        q = self.question.get()
+    def correct(self):
+        q = self.question.get(0.0, END)
         ans = self.answer.get()
         self.correctbox.delete(0.0, END)
         for d in range(len(thatlist)):
