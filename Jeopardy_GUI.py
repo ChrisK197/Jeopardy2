@@ -140,7 +140,7 @@ class Application (Frame):
         self.question.insert(0.0, dic[quesPos])
 
     def correct(self):
-        q = self.question.get(0.0, END)
+        q = self.question.get(0.0, END).strip()
         ans = self.answer.get()
         self.correctbox.delete(0.0, END)
         for d in range(len(thatlist)):
