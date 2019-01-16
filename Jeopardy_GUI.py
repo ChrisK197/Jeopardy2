@@ -145,7 +145,7 @@ class Application (Frame):
         self.correctbox.delete(0.0, END)
         for d in range(len(thatlist)):
             dictt = thatlist[d]
-            if dictt[q] is not None:
+            if q in dictt:
                 if ans == dictt[q]:
                     self.correctbox.insert(0.0, 'CORRECT!!!!!')
                 else:
