@@ -46,7 +46,7 @@ class Application (Frame):
     def create_widgets(self):
         # Question box
         Label(self, text="Question:", font=("Comic Sans", 15)).grid(row=7, column=2, columnspan=2, sticky=N + S + E + W)
-        self.question = Text(self, height=5, wrap=WORD, relief="solid")
+        self.question = Text(self, height=2, wrap=WORD, relief="solid")
         self.question.grid(row=8, column=0, columnspan=5)
 
         # Header
