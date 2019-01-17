@@ -1,7 +1,7 @@
 from tkinter import *
 
 # LEO'S GOOD FILE
-#
+# Leo's bad variable names
 
 bca = open('bca_questions.txt', 'r')
 meme = open('meme_questions.txt', 'r')
@@ -141,7 +141,6 @@ class Application (Frame):
         self.question.delete(0.0, END)
         self.question.insert(0.0, questDict[col])
         self.currAns = ansDict[questDict[col]]
-        print ("Hello")
 
     def correct(self):
         q = self.question.get(0.0, END).strip()
