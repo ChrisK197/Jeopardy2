@@ -19,13 +19,13 @@ for file in filelist:
     for line in file:
         line = line.split(';')
         if file == bca:
-            dbca[line[0]] = line[1]
+            dbca[line[0].strip()] = line[1].strip()
         elif file == meme:
-            dmeme[line[0]] = line[1]
+            dmeme[line[0].strip()] = line[1].strip()
         elif file == number:
-            dnumber[line[0]] = line[1]
+            dnumber[line[0].strip()] = line[1].strip()
         elif file == python:
-            dpython[line[0]] = line[1]
+            dpython[line[0].strip()] = line[1].strip()
         else:
             drandom[line[0].strip()] = line[1].strip()
 keybca = list(dbca.keys())
@@ -41,6 +41,7 @@ class Application (Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
         self.grid()
+        self.currAns = ""
         self.create_widgets()
 
     def create_widgets(self):
@@ -134,22 +135,23 @@ class Application (Frame):
         # Footer
         Label(self, text=" ", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=13, column=0, columnspan=5, sticky=N + S + E + W)
 
-    def question_bttn(self, dic, quesPos):
-        dic = keyslist[dic]
+    def question_bttn(self, row, col):
+        questDict = keyslist[row]
+        ansDict = thatlist[row]
         self.question.delete(0.0, END)
-        self.question.insert(0.0, dic[quesPos])
+        self.question.insert(0.0, questDict[col])
+        self.currAns = ansDict[questDict[col]]
+        print ("Hello")
 
     def correct(self):
         q = self.question.get(0.0, END).strip()
         ans = self.answer.get()
         self.correctbox.delete(0.0, END)
-        for d in range(len(thatlist)):
-            dictt = thatlist[d]
-            if q in dictt:
-                if ans.lower() == dictt[q]:
-                    self.correctbox.insert(0.0, 'CORRECT!!!!!')
-                else:
-                    self.correctbox.insert(0.0, "INCORRECT :(")
+
+        if ans.lower() == self.currAns:
+            self.correctbox.insert(0.0, 'CORRECT!!!!!')
+        else:
+            self.correctbox.insert(0.0, "INCORRECT :(")
 
 root = Tk()
 root.title("Jeopardy")
