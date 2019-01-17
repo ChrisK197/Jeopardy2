@@ -14,7 +14,7 @@ dmeme = {}
 dnumber = {}
 dpython = {}
 drandom = {}
-thatlist = [dbca, dmeme, dnumber, dpython, drandom]
+ansdictlist = [dbca, dmeme, dnumber, dpython, drandom]
 for file in filelist:
     for line in file:
         line = line.split(';')
@@ -137,7 +137,7 @@ class Application (Frame):
 
     def question_bttn(self, row, col):
         questDict = keyslist[row]
-        ansDict = thatlist[row]
+        ansDict = ansdictlist[row]
         self.question.delete(0.0, END)
         self.question.insert(0.0, questDict[col])
         self.currAns = ansDict[questDict[col]]
