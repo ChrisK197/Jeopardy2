@@ -146,7 +146,7 @@ class Application (Frame):
         q = self.question.get(0.0, END).strip()
         ans = self.answer.get()
         self.correctbox.delete(0.0, END)
-
+        self.answer.delete(0, "end")
         if ans.lower() == self.currAns:
             self.correctbox.insert(0.0, 'CORRECT!!!!!')
         else:
