@@ -28,12 +28,43 @@ for file in filelist:
             dpython[line[0].strip()] = line[1].strip()
         else:
             drandom[line[0].strip()] = line[1].strip()
-keybca = list(dbca.keys())
-keymeme = list(dmeme.keys())
-keynumber = list(dnumber.keys())
-keypython = list(dpython.keys())
-keyrandom = list(drandom.keys())
-keyslist = [keybca, keymeme, keynumber, keypython, keyrandom]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 class Application (Frame):
