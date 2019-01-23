@@ -1,5 +1,6 @@
-This green Pokemon can be summoned by Pokemon Trainer in Super Smash Bros Ultimate;ivysaur
-How long is Bohemian Rhapsody by Queen (put colon between minutes and seconds [if seconds are relevant]);5:55
-Which track in Mario Kart Wii featured bats that flew out at you;wario's gold mine
-How old was Albert Einstein when he proposed the theory of relativity;26
-This ancient pyramid-like temple was constructed by ancient Sumerians;ziggurat
+Miscellaneous
+This green Pokemon can be summoned by Pokemon Trainer in Super Smash Bros Ultimate;ivysaur;4,2
+How long is Bohemian Rhapsody by Queen (put colon between minutes and seconds [if seconds are relevant]);5:55;4,3
+Which track in Mario Kart Wii featured bats that flew out at you;wario's gold mine;4,4
+How old was Albert Einstein when he proposed the theory of relativity;26;4,5
+This ancient pyramid-like temple was constructed by ancient Sumerians;ziggurat;4,6
