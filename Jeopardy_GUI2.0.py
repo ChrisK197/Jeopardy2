@@ -27,7 +27,7 @@ class Application (Frame):
                 d["Q"] = line[0]
                 d["A"] = line[1]  # Add button parameter
                 d['button'] = line[2]  # column,row
-                self.questDict[category + "-" + str(val)] = d
+                self.questDict[category + "_" + str(val)] = d
                 val += 100
 
         self.create_widgets()
@@ -47,64 +47,64 @@ class Application (Frame):
             Label(self, text=term, relief='solid', font=('Comic Sans', 30), bg='blue').grid(row=1, column=c, columnspan=1, sticky=N+S+E+W)
             c += 1
         # 100 Point row
-        self.cat1_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("BCA-100")) #command
-        self.cat1_100.grid(row=2, column=0, sticky=N+S+E+W)
-        self.cat2_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("Memes-100")) #command
-        self.cat2_100.grid(row=2, column=1, sticky=N+S+E+W)
-        self.cat3_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("Numbers-100")) #command
-        self.cat3_100.grid(row=2, column=2, sticky=N+S+E+W)
-        self.cat4_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("Python-100")) #command
-        self.cat4_100.grid(row=2, column=3, sticky=N+S+E+W)
-        self.cat5_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("Miscellaneous-100")) #command
-        self.cat5_100.grid(row=2, column=4, sticky=N+S+E+W)
+        self.BCA_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("BCA_100")) #command
+        self.BCA_100.grid(row=2, column=0, sticky=N + S + E + W)
+        self.Memes_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("Memes_100")) #command
+        self.Memes_100.grid(row=2, column=1, sticky=N + S + E + W)
+        self.Numbers_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("Numbers_100")) #command
+        self.Numbers_100.grid(row=2, column=2, sticky=N + S + E + W)
+        self.Python_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("Python_100")) #command
+        self.Python_100.grid(row=2, column=3, sticky=N + S + E + W)
+        self.Miscellaneous_100 = Button(self, text="100", font=("Comic Sans", 30), relief="solid", bg="red", command=lambda: self.question_bttn("Miscellaneous_100")) #command
+        self.Miscellaneous_100.grid(row=2, column=4, sticky=N + S + E + W)
 
         # 200 Point row
-        self.cat1_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("BCA-200"))  # command
-        self.cat1_200.grid(row=3, column=0, sticky=N+S+E+W)
-        self.cat2_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("Memes-200"))  # command
-        self.cat2_200.grid(row=3, column=1, sticky=N+S+E+W)
-        self.cat3_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("Numbers-200"))  # command
-        self.cat3_200.grid(row=3, column=2, sticky=N+S+E+W)
-        self.cat4_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("Python-200"))  # command
-        self.cat4_200.grid(row=3, column=3, sticky=N+S+E+W)
-        self.cat5_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("Miscellaneous-200"))  # command
-        self.cat5_200.grid(row=3, column=4, sticky=N+S+E+W)
+        self.BCA_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("BCA_200"))  # command
+        self.BCA_200.grid(row=3, column=0, sticky=N + S + E + W)
+        self.Memes_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("Memes_200"))  # command
+        self.Memes_200.grid(row=3, column=1, sticky=N + S + E + W)
+        self.Numbers_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("Numbers_200"))  # command
+        self.Numbers_200.grid(row=3, column=2, sticky=N + S + E + W)
+        self.Python_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("Python_200"))  # command
+        self.Python_200.grid(row=3, column=3, sticky=N + S + E + W)
+        self.Miscellaneous_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", command=lambda: self.question_bttn("Miscellaneous_200"))  # command
+        self.Miscellaneous_200.grid(row=3, column=4, sticky=N + S + E + W)
 
         # 300 Point row
-        self.cat1_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("BCA-300"))  # command
-        self.cat1_300.grid(row=4, column=0, sticky=N+S+E+W)
-        self.cat2_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("Memes-300"))  # command
-        self.cat2_300.grid(row=4, column=1, sticky=N+S+E+W)
-        self.cat3_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("Numbers-300"))  # command
-        self.cat3_300.grid(row=4, column=2, sticky=N+S+E+W)
-        self.cat4_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("Python-300"))  # command
-        self.cat4_300.grid(row=4, column=3, sticky=N+S+E+W)
-        self.cat5_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("Miscellaneous-300"))  # command
-        self.cat5_300.grid(row=4, column=4, sticky=N+S+E+W)
+        self.BCA_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("BCA_300"))  # command
+        self.BCA_300.grid(row=4, column=0, sticky=N + S + E + W)
+        self.Memes_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("Memes_300"))  # command
+        self.Memes_300.grid(row=4, column=1, sticky=N + S + E + W)
+        self.Numbers_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("Numbers_300"))  # command
+        self.Numbers_300.grid(row=4, column=2, sticky=N + S + E + W)
+        self.Python_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("Python_300"))  # command
+        self.Python_300.grid(row=4, column=3, sticky=N + S + E + W)
+        self.Miscellaneous_300 = Button(self, text="300", font=("Comic Sans", 30), relief="solid", bg="yellow", command=lambda: self.question_bttn("Miscellaneous_300"))  # command
+        self.Miscellaneous_300.grid(row=4, column=4, sticky=N + S + E + W)
 
         # 400 Point row
-        self.cat1_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("BCA-400"))  # command
-        self.cat1_400.grid(row=5, column=0, sticky=N+S+E+W)
-        self.cat2_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("Memes-400"))  # command
-        self.cat2_400.grid(row=5, column=1, sticky=N+S+E+W)
-        self.cat3_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("Numbers-400"))  # command
-        self.cat3_400.grid(row=5, column=2, sticky=N+S+E+W)
-        self.cat4_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("Python-400"))  # command
-        self.cat4_400.grid(row=5, column=3, sticky=N+S+E+W)
-        self.cat5_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("Miscellaneous-400"))  # command
-        self.cat5_400.grid(row=5, column=4, sticky=N+S+E+W)
+        self.BCA_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("BCA_400"))  # command
+        self.BCA_400.grid(row=5, column=0, sticky=N + S + E + W)
+        self.Memes_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("Memes_400"))  # command
+        self.Memes_400.grid(row=5, column=1, sticky=N + S + E + W)
+        self.Numbers_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("Numbers_400"))  # command
+        self.Numbers_400.grid(row=5, column=2, sticky=N + S + E + W)
+        self.Python_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("Python_400"))  # command
+        self.Python_400.grid(row=5, column=3, sticky=N + S + E + W)
+        self.Miscellaneous_400 = Button(self, text="400", font=("Comic Sans", 30), relief="solid", bg="green", command=lambda: self.question_bttn("Miscellaneous_400"))  # command
+        self.Miscellaneous_400.grid(row=5, column=4, sticky=N + S + E + W)
 
         # 500 Point row
-        self.cat1_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("BCA-500"))  # command
-        self.cat1_500.grid(row=6, column=0, sticky=N+S+E+W)
-        self.cat2_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("Memes-500"))  # command
-        self.cat2_500.grid(row=6, column=1, sticky=N+S+E+W)
-        self.cat3_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("Numbers-500"))  # command
-        self.cat3_500.grid(row=6, column=2, sticky=N+S+E+W)
-        self.cat4_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("Python-500"))  # command
-        self.cat4_500.grid(row=6, column=3, sticky=N+S+E+W)
-        self.cat5_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("Miscellaneous-500"))  # command
-        self.cat5_500.grid(row=6, column=4, sticky=N+S+E+W)
+        self.BCA_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("BCA_500"))  # command
+        self.BCA_500.grid(row=6, column=0, sticky=N + S + E + W)
+        self.Memes_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("Memes_500"))  # command
+        self.Memes_500.grid(row=6, column=1, sticky=N + S + E + W)
+        self.Numbers_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("Numbers_500"))  # command
+        self.Numbers_500.grid(row=6, column=2, sticky=N + S + E + W)
+        self.Python_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("Python_500"))  # command
+        self.Python_500.grid(row=6, column=3, sticky=N + S + E + W)
+        self.Miscellaneous_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", command=lambda: self.question_bttn("Miscellaneous_500"))  # command
+        self.Miscellaneous_500.grid(row=6, column=4, sticky=N + S + E + W)
 
 
 
@@ -123,7 +123,6 @@ class Application (Frame):
         Label(self, text=" ", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=13, column=0, columnspan=5, sticky=N + S + E + W)
 
     def question_bttn(self, name):
-        global questDict
         self.question.delete(0.0, END)
         currentdict = self.questDict[name]
         self.question.insert(0.0, currentdict["Q"])
