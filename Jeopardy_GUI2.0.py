@@ -122,7 +122,6 @@ class Application (Frame):
         Label(self, text=" ", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=13, column=0, columnspan=5, sticky=N + S + E + W)
 
     def question_bttn(self, name):
-        global questDict
         self.question.delete(0.0, END)
         currentdict = self.questDict[name]
         self.question.insert(0.0, currentdict["Q"])
