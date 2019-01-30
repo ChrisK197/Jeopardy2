@@ -8,6 +8,7 @@ class Application (Frame):
 
     def __init__(self, master):
         super(Application, self).__init__(master)
+        master.bind("<Return>", self.correct)
         self.grid()
         self.currAns = ""
 
@@ -128,7 +129,7 @@ class Application (Frame):
         self.question.insert(0.0, currentdict["Q"])
         self.currAns = currentdict["A"]
 
-    def correct(self):
+    def correct(self, event=0):
         q = self.question.get(0.0, END).strip()
         ans = self.answer.get()
         self.correctbox.delete(0.0, END)

@@ -149,9 +149,9 @@ class Application (Frame):
         self.answer.delete(0, "end")
         if ans.lower() == self.currAns:
             self.correctbox.insert(0.0, 'CORRECT!!!!!')
+
         else:
             self.correctbox.insert(0.0, "INCORRECT :(")
-
 root = Tk()
 root.title("Jeopardy")
 app = Application(root)
