@@ -11,6 +11,7 @@ class Application (Frame):
         master.bind("<Return>", self.correct)
         self.grid()
         self.currAns = ""
+        self.score = 0
 
         fileNames = ['bca_questions.txt', 'meme_questions.txt', 'number_questions.txt', 'python_questions.txt',
                      'random_questions.txt']
@@ -128,16 +129,21 @@ class Application (Frame):
         currentdict = self.questDict[name]
         self.question.insert(0.0, currentdict["Q"])
         self.currAns = currentdict["A"]
+        self.name = name
 
     def correct(self, event=0):
         q = self.question.get(0.0, END).strip()
         ans = self.answer.get()
         self.correctbox.delete(0.0, END)
         self.answer.delete(0, "end")
+        h = self.questDict[self.name]
+        p = h['point']
         if ans.lower() == self.currAns:
-            self.correctbox.insert(0.0, 'CORRECT!!!!!')
+            self.score += p
+            self.correctbox.insert(0.0, 'CORRECT!!!!!\nScore = %d' % self.score)
         else:
-            self.correctbox.insert(0.0, "INCORRECT :(")
+            self.score -= p
+            self.correctbox.insert(0.0, "INCORRECT :(\nScore = %d" % self.score)
 
 root = Tk()
 root.title("Jeopardy")
