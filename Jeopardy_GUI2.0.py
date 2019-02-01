@@ -27,6 +27,7 @@ class Application (Frame):
                 d["Q"] = line[0]
                 d["A"] = line[1]  # Add button parameter
                 d['button'] = line[2]  # column,row
+                d['point'] = val
                 self.questDict[category + "_" + str(val)] = d
                 val += 100
 
