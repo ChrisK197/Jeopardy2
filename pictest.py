@@ -44,7 +44,7 @@ class Application (Frame):
 
         label1 = Label(image=gif1)
         label1.image = gif1
-        label1.grid(row=5, column=7, columnspan=1, sticky=W)
+        label1.grid(row=5, column=10, columnspan=1, sticky=W)
 
         # Header
         Label(self, text="Jeopardy", relief="solid", font=("Comic Sans", 30), bg="blue").grid(row=0, column=0,
