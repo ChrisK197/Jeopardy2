@@ -68,14 +68,19 @@ class Application (Frame):
 
         # 200 Point row
         self.BCA_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", state=NORMAL, command=lambda: self.question_bttn("BCA_200"))  # command
+        self.buttons["BCA_200"] = self.BCA_200
         self.BCA_200.grid(row=3, column=0, sticky=N + S + E + W)
         self.Memes_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", state=NORMAL, command=lambda: self.question_bttn("Memes_200"))  # command
+        self.buttons["Memes_200"] = self.Memes_200
         self.Memes_200.grid(row=3, column=1, sticky=N + S + E + W)
         self.Numbers_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", state=NORMAL, command=lambda: self.question_bttn("Numbers_200"))  # command
+        self.buttons["Numbers_200"] = self.Numbers_200
         self.Numbers_200.grid(row=3, column=2, sticky=N + S + E + W)
         self.Python_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", state=NORMAL, command=lambda: self.question_bttn("Python_200"))  # command
+        self.buttons["Python_200"] = self.Python_200
         self.Python_200.grid(row=3, column=3, sticky=N + S + E + W)
         self.Miscellaneous_200 = Button(self, text="200", font=("Comic Sans", 30), relief="solid", bg="orange", state=NORMAL, command=lambda: self.question_bttn("Miscellaneous_200"))  # command
+        self.buttons["Miscellaneous_200"] = self.Miscellaneous_200
         self.Miscellaneous_200.grid(row=3, column=4, sticky=N + S + E + W)
 
         # 300 Point row
@@ -114,14 +119,19 @@ class Application (Frame):
 
         # 500 Point row
         self.BCA_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", state=NORMAL, command=lambda: self.question_bttn("BCA_500"))  # command
+        self.buttons["BCA_500"] = self.BCA_500
         self.BCA_500.grid(row=6, column=0, sticky=N + S + E + W)
         self.Memes_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", state=NORMAL, command=lambda: self.question_bttn("Memes_500"))  # command
+        self.buttons["Memes_500"] = self.Memes_500
         self.Memes_500.grid(row=6, column=1, sticky=N + S + E + W)
         self.Numbers_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", state=NORMAL, command=lambda: self.question_bttn("Numbers_500"))  # command
+        self.buttons["Numbers_500"] = self.Numbers_500
         self.Numbers_500.grid(row=6, column=2, sticky=N + S + E + W)
         self.Python_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", state=NORMAL, command=lambda: self.question_bttn("Python_500"))  # command
+        self.buttons["Python_500"] = self.Python_500
         self.Python_500.grid(row=6, column=3, sticky=N + S + E + W)
         self.Miscellaneous_500 = Button(self, text="500", font=("Comic Sans", 30), relief="solid", bg="purple", state=NORMAL, command=lambda: self.question_bttn("Miscellaneous_500"))  # command
+        self.buttons["Miscellaneous_500"] = self.Miscellaneous_500
         self.Miscellaneous_500.grid(row=6, column=4, sticky=N + S + E + W)
 
 
